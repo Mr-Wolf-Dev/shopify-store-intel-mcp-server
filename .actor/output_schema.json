@@ -1,0 +1,20 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Shopify Store Intelligence Output",
+  "description": "Normalized Shopify store tech stack, apps, contacts, collections, and product pricing data.",
+  "type": "object",
+  "properties": {
+    "overview": {
+      "type": "string",
+      "title": "Stores Overview",
+      "description": "Table view of analyzed Shopify stores.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "dataset": {
+      "type": "string",
+      "title": "Full Store Intelligence Dataset (JSON)",
+      "description": "Complete JSON dataset including products, collections, apps, and pricing stats.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}

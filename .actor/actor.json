@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "shopify-store-intel-mcp-server",
+  "title": "Shopify Store Intelligence, Apps & Catalog + MCP",
+  "description": "HTTP-only Apify Actor & Standby MCP Server extracting Shopify themes, 25+ installed apps & pixels, payment methods, contacts, collections, and /products.json pricing.",
+  "version": "0.1",
+  "usesStandbyMode": true,
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "dockerfile": "../Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

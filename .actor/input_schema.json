@@ -1,0 +1,34 @@
+{
+  "title": "Shopify Store Intelligence Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "domains": {
+      "title": "Shopify Store Domains",
+      "type": "array",
+      "description": "List of Shopify store domains or URLs to analyze (e.g. [\"allbirds.com\", \"gymshark.com\"]).",
+      "editor": "stringList",
+      "prefill": ["allbirds.com"]
+    },
+    "includeProducts": {
+      "title": "Include Product Catalog",
+      "type": "boolean",
+      "description": "Fetch /products.json and compute pricing stats.",
+      "default": true
+    },
+    "maxProductsPerStore": {
+      "title": "Max Products Per Store",
+      "type": "integer",
+      "description": "Maximum number of products to extract per store (1-250).",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 250
+    },
+    "includeCollections": {
+      "title": "Include Collections",
+      "type": "boolean",
+      "description": "Fetch /collections.json metadata.",
+      "default": true
+    }
+  }
+}

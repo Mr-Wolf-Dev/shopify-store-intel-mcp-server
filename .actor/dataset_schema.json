@@ -1,0 +1,45 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "domain": { "type": "string", "description": "Normalized Shopify store domain." },
+      "storeUrl": { "type": "string", "description": "Final resolved store URL." },
+      "isShopify": { "type": "boolean", "description": "Whether Shopify platform signatures were detected." },
+      "myshopifyDomain": { "type": ["string", "null"], "description": "Underlying .myshopify.com domain if exposed." },
+      "title": { "type": ["string", "null"], "description": "Store homepage title." },
+      "themeName": { "type": ["string", "null"], "description": "Active Shopify theme name." },
+      "currency": { "type": ["string", "null"], "description": "Store active currency code." },
+      "appNames": { "type": "array", "items": { "type": "string" }, "description": "Detected Shopify apps and pixels." },
+      "paymentMethods": { "type": "array", "items": { "type": "string" }, "description": "Detected payment and BNPL methods." },
+      "emails": { "type": "array", "items": { "type": "string" }, "description": "Extracted contact emails." },
+      "catalogStatus": { "type": "string", "description": "Status of /products.json fetch." },
+      "pricingStats": { "type": "object", "description": "Aggregate product pricing and vendor stats." },
+      "products": { "type": "array", "description": "Normalized Shopify products." },
+      "collections": { "type": "array", "description": "Normalized Shopify collections." },
+      "extractedAt": { "type": "string", "description": "ISO timestamp of extraction." }
+    },
+    "required": ["domain", "storeUrl", "isShopify", "appNames", "paymentMethods", "catalogStatus", "pricingStats", "extractedAt"]
+  },
+  "views": {
+    "overview": {
+      "title": "Shopify Store Intelligence Overview",
+      "transformation": {
+        "fields": ["domain", "isShopify", "themeName", "currency", "appNames", "paymentMethods", "catalogStatus"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "domain": { "label": "Domain", "format": "text" },
+          "isShopify": { "label": "Shopify", "format": "boolean" },
+          "themeName": { "label": "Theme", "format": "text" },
+          "currency": { "label": "Currency", "format": "text" },
+          "appNames": { "label": "Apps & Pixels", "format": "array" },
+          "paymentMethods": { "label": "Payments", "format": "array" },
+          "catalogStatus": { "label": "Catalog", "format": "text" }
+        }
+      }
+    }
+  }
+}
