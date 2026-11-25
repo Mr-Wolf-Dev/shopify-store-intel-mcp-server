@@ -1,5 +1,7 @@
 # Shopify Store Intelligence, Apps & Catalog + MCP
 
+[![Glama MCP Server](https://glama.ai/mcp/servers/Mr-Wolf-Dev/shopify-store-intel-mcp-server/badges/score.svg)](https://glama.ai/mcp/servers/Mr-Wolf-Dev/shopify-store-intel-mcp-server)
+
 **Keyless, HTTP-only (< 512 MB RAM) Apify Actor & Standby Streamable HTTP MCP Server** for Shopify store intelligence, app/pixel stack detection, contact extraction, and product catalog pricing analysis.
 
 - **Apify Store:** `https://apify.com/mr.wolf/shopify-store-intel-mcp-server`
