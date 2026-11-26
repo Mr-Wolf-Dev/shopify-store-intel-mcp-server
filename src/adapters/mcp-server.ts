@@ -17,7 +17,7 @@ export interface McpServerDependencies {
   billing: BillingMeter<ShopifyBillingEvent>;
 }
 
-function createConfiguredMcpServer(deps: McpServerDependencies): McpServer {
+export function createConfiguredMcpServer(deps: McpServerDependencies): McpServer {
   const server = new McpServer({
     name: 'shopify-store-intel-mcp-server',
     version: '0.1.0',
