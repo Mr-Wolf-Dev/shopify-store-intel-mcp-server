@@ -2,12 +2,12 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Mr-Wolf-Dev/shopify-store-intel-mcp-server",
   "title": "Shopify Store Intelligence, Apps & Catalog + MCP",
-  "description": "HTTP-only Apify Actor & Standby MCP Server extracting Shopify themes, 25+ installed apps & pixels, p",
+  "description": "Shopify store intel: theme, installed apps, tracking pixels, products and prices from any store.",
   "repository": {
     "url": "https://github.com/Mr-Wolf-Dev/shopify-store-intel-mcp-server",
     "source": "github"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "remotes": [
     {
       "type": "streamable-http",
